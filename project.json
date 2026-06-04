@@ -1,0 +1,22 @@
+{
+  "overview": "A 3D interactive digital portfolio website for Durgesh Dutt Sinha, BCA student specializing in Cybersecurity and AI/ML.",
+  "features": [
+    "3D animated hero section with floating particles",
+    "Glassmorphism skill cards with category groupings",
+    "Education timeline",
+    "Certifications grid",
+    "Projects and internships showcase",
+    "Achievements section",
+    "Contact section with email, phone, and LinkedIn"
+  ],
+  "category": "portfolio",
+  "tags": [
+    "portfolio",
+    "3d",
+    "cybersecurity",
+    "ai-ml",
+    "dark-theme",
+    "glassmorphism"
+  ],
+  "last_updated": "2026-06-04T13:10:06.844Z"
+}
