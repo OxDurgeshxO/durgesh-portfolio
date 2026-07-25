@@ -1,9 +1,0 @@
-// Version: 4.0.0
-type NewActor__423592003 = {};
-type OldActor__628516495 = {};
-{
-  "20260101_000000_Init" : OldActor__628516495 -> NewActor__423592003
-}
-actor  {
-  
-};
