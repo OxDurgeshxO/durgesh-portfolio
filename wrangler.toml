@@ -1,0 +1,6 @@
+# Cloudflare Pages configuration
+name = "durgesh-portfolio"
+pages_build_output_dir = "src/frontend/dist"
+
+[build]
+command = "pnpm install --frozen-lockfile && pnpm --filter @caffeine/template-frontend build"
