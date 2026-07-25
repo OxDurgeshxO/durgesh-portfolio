@@ -15,6 +15,10 @@ jobs:
       contents: read
       deployments: write
 
+    defaults:
+      run:
+        working-directory: src/frontend
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,18 +33,21 @@ jobs:
         with:
           version: 8
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install frontend dependencies
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build frontend
-        run: pnpm --filter @caffeine/template-frontend build
+        run: pnpm build
         env:
           NODE_ENV: production
           DFX_NETWORK: ic
+          II_URL: https://id.ai/authorize
+          STORAGE_GATEWAY_URL: https://blob.caffeine.ai
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy src/frontend/dist --project-name=durgesh-portfolio --branch=main
+          workingDirectory: src/frontend
+          command: pages deploy dist --project-name=durgesh-portfolio --branch=main
