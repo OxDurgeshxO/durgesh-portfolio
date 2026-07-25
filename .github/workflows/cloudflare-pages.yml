@@ -41,6 +41,6 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{cfk_1ADqH7iMFFxJ91sPHfSa9KvzSGgYOcNkTz0V2Hiue0d4772e}}
-          accountId: ${{ 8123c83f7a3dcece2e5503fbf437bab0 }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy src/frontend/dist --project-name=durgesh-portfolio --branch=main
