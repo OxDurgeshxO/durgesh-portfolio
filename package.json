@@ -1,5 +1,8 @@
 {
-  "name": "@caffeine/template-app",
+  "name": "durgesh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal developer portfolio website for Durgesh Dutt Sinha — built with Next.js and TypeScript",
+  "homepage": "https://github.com/OxDurgeshxO/durgesh-portfolio",
   "type": "module",
   "engines": {
     "node": ">=16.0.0",
